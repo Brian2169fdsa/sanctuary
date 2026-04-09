@@ -1,437 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You — Sanctuary Recovery Centers</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    background: #f2f4f6;
-    font-family: 'Montserrat', sans-serif;
-    color: #2c2c2c;
-    -webkit-text-size-adjust: 100%;
-  }
+<style>@media (max-width: 580px) {
+    .content {
+        padding: 24px 18px !important
+        }
+    .footer {
+        padding: 20px 18px !important
+        }
+    .footer-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 14px !important
+        }
+    .f-right {
+        text-align: center !important
+        }
+    .f-divider {
+        margin: 8px auto !important
+        }
+    .f-logo-img {
+        width: 70px !important
+        }
+    .opening-statement {
+        font-size: 19px !important;
+        padding-left: 14px !important
+        }
+    .pull-quote {
+        padding: 20px 18px !important
+        }
+    .pull-quote p {
+        font-size: 16px !important
+        }
+    .body-text p {
+        font-size: 13px !important
+        }
+    .signature .name {
+        font-size: 22px !important
+        }
+    .hero {
+        height: 110px !important
+        }
+    .hero-ring {
+        margin: 12px 10px 0 !important
+        }
+    .photo-grid {
+        gap: 5px !important
+        }
+    }
+@media (max-width: 420px) {
+    .photo-grid {
+        grid-template-columns: 1fr !important
+        }
+    .photo-slot {
+        aspect-ratio: 16/9 !important
+        }
+    .opening-statement {
+        font-size: 17px !important
+        }
+    .tagline-strip {
+        white-space: normal !important
+        }
+    .tagline-strip p {
+        font-size: 8px !important;
+        letter-spacing: 1px !important
+        }
+    }</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/></head>
+<body style='background:#f2f4f6; font-family:"Montserrat", sans-serif; color:#2c2c2c; -webkit-text-size-adjust:100%'>
 
-  .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #ffffff;
-  }
-
-  /* ── HERO WRAPPER — gradient ring border like event card ── */
-  .hero-ring {
-    padding: 5px;
-    background: linear-gradient(135deg, #1aacba 0%, #3dbfcc 30%, #d4a843 65%, #f07840 100%);
-    border-radius: 14px;
-    margin: 20px 16px 0;
-  }
-
-  /* ── HERO BANNER ── */
-  .hero {
-    position: relative;
-    height: 190px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    border-radius: 10px;
-  }
-
-  /* ── BRAND BAR ── */
-  .brand-bar {
-    text-align: center;
-    padding: 20px 32px 24px;
-    border-bottom: 2px solid #f5f5f5;
-  }
-
-  .logo-area {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 6px;
-  }
-
-  .org-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #1aacba;
-    letter-spacing: 0.5px;
-  }
-
-  .org-name span { color: #f07840; }
-
-  .brand-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #aaa;
-    margin-top: 2px;
-  }
-
-  .anniversary-badge {
-    display: inline-block;
-    margin-top: 12px;
-    background: linear-gradient(135deg, #f07840, #e05a20);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 20px;
-  }
-
-  /* ── CONTENT ── */
-  .content { padding: 40px 48px; }
-
-  .salutation {
-    font-size: 11px;
-    font-weight: 600;
-    color: #aaa;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-
-  .opening-statement {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.45;
-    color: #1a1a1a;
-    margin-bottom: 32px;
-    padding-left: 18px;
-    border-left: 3px solid #f07840;
-  }
-
-  /* ── PHOTO GRIDS ── */
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 32px;
-  }
-
-  .photo-slot {
-    aspect-ratio: 4/3;
-    background: #e8f7f9;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .photo-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 5px;
-  }
-
-  .ph-icon {
-    width: 30px;
-    height: 30px;
-    background: rgba(26,172,186,0.12);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 7px;
-  }
-
-  .ph-icon svg {
-    width: 15px;
-    height: 15px;
-    fill: #1aacba;
-  }
-
-  .ph-label {
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #1aacba;
-    text-align: center;
-  }
-
-  /* ── TEAL PULL QUOTE ── */
-  .pull-quote {
-    background: linear-gradient(135deg, #1aacba, #12909c);
-    border-radius: 8px;
-    padding: 26px 30px;
-    margin-bottom: 28px;
-  }
-
-  .pull-quote p {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: italic;
-    color: #fff;
-    line-height: 1.5;
-  }
-
-  /* ── BODY TEXT ── */
-  .body-text { margin-bottom: 32px; }
-
-  .body-text p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.9;
-    color: #555;
-    margin-bottom: 14px;
-  }
-
-  .body-text p:last-child { margin-bottom: 0; }
-
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-
-  .divider span { flex: 1; height: 1px; background: #eee; }
-
-  .divider .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1aacba, #f07840);
-    flex-shrink: 0;
-  }
-
-  /* ── TAGLINE STRIP ── */
-  .tagline-strip {
-    background: #fff8f5;
-    border: 1px solid #fcdecb;
-    border-radius: 6px;
-    padding: 15px 20px;
-    text-align: center;
-    margin-bottom: 32px;
-    white-space: nowrap;
-  }
-
-  .tagline-strip p {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #f07840;
-  }
-
-  /* ── SIGNATURE ── */
-  .signature { margin-bottom: 8px; }
-
-  .signature .sign-off {
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    font-style: italic;
-    color: #aaa;
-    margin-bottom: 8px;
-  }
-
-  .signature .name {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: #1a1a1a;
-    line-height: 1.1;
-    margin-bottom: 6px;
-  }
-
-  .signature .title {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #1aacba;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    background: #2a2828;
-    padding: 28px 32px;
-  }
-
-  .footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .f-logo-img {
-    width: 90px;
-    height: auto;
-    display: block;
-    flex-shrink: 0;
-  }
-
-  .f-right {
-    text-align: right;
-  }
-
-  .f-divider {
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(to left, #1aacba, #f07840);
-    margin: 8px 0 8px auto;
-    border-radius: 2px;
-  }
-
-  .f-tag {
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 6px;
-  }
-
-  .f-addr {
-    font-size: 9px;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.5px;
-  }
-
-  /* ── MOBILE ── */
-  @media (max-width: 580px) {
-    .content { padding: 24px 18px; }
-    .footer { padding: 20px 18px; }
-    .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 14px; }
-    .f-right { text-align: center; }
-    .f-divider { margin: 8px auto; }
-    .f-logo-img { width: 70px; }
-    .opening-statement { font-size: 19px; padding-left: 14px; }
-    .pull-quote { padding: 20px 18px; }
-    .pull-quote p { font-size: 16px; }
-    .body-text p { font-size: 13px; }
-    .signature .name { font-size: 22px; }
-    .hero { height: 110px; }
-    .hero-ring { margin: 12px 10px 0; }
-    .photo-grid { gap: 5px; }
-  }
-
-  @media (max-width: 420px) {
-    .photo-grid { grid-template-columns: 1fr; }
-    .photo-slot { aspect-ratio: 16/9; }
-    .opening-statement { font-size: 17px; }
-    .tagline-strip { white-space: normal; }
-    .tagline-strip p { font-size: 8px; letter-spacing: 1px; }
-  }
-</style>
-</head>
-<body>
-
-<div class="wrapper">
+<div class="wrapper" style="max-width:800px; margin:0 auto; background:#fff">
 
   <!-- HERO BANNER -->
-  <div class="hero-ring">
-    <div class="hero">
-      <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/Copy+of+Sanctuary_20Year_Flyer_v2.pdf-4.png" alt="Sanctuary Recovery Centers 20 Years"/>
+  <div class="hero-ring" style="padding:5px; background:linear-gradient(135deg, #1aacba 0%, #3dbfcc 30%, #d4a843 65%, #f07840 100%); border-radius:14px; margin:20px 16px 0">
+    <div class="hero" style="position:relative; height:190px; overflow:hidden; border-radius:10px" height="190">
+      <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/Copy+of+Sanctuary_20Year_Flyer_v2.pdf-4.png" alt="Sanctuary Recovery Centers 20 Years" style="width:100%; height:100%; object-fit:cover; object-position:center center; display:block; border-radius:10px" width="100%" height="100%">
     </div>
   </div>
 
   <!-- MAIN CONTENT -->
-  <div class="content">
+  <div class="content" style="padding:40px 48px">
 
-    <div class="salutation">Dear Community Partner,</div>
+    <div class="salutation" style="font-size:11px; font-weight:600; color:#aaa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px">Dear Community Partner,</div>
 
-    <div class="opening-statement">
+    <div class="opening-statement" style='font-family:"Playfair Display", serif; font-size:26px; font-weight:400; font-style:italic; line-height:1.45; color:#1a1a1a; margin-bottom:32px; padding-left:18px; border-left:3px solid #f07840'>
       I wanted to take a moment to reach out personally and say thank you.
     </div>
 
     <!-- PHOTO ROW 1 -->
-    <div class="photo-grid">
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-116.jpg" alt="Event Photo"/>
+    <div class="photo-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:32px">
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-116.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-17.jpg" alt="Event Photo"/>
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-17.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-92.jpg" alt="Event Photo"/>
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-92.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
     </div>
 
     <!-- PULL QUOTE -->
-    <div class="pull-quote">
-      <p>"The work we do at Sanctuary has never been done alone."</p>
+    <div class="pull-quote" style="background:linear-gradient(135deg, #1aacba, #12909c); border-radius:8px; padding:26px 30px; margin-bottom:28px">
+      <p style='font-family:"Playfair Display", serif; font-size:20px; font-weight:600; font-style:italic; color:#fff; line-height:1.5'>"The work we do at Sanctuary has never been done alone."</p>
     </div>
 
     <!-- BODY TEXT -->
-    <div class="body-text">
-      <p>Behind every life restored, every family reunited, and every person who found their way back, there is a community. You are part of that community.</p>
-      <p>The partnerships we have built together are not transactional. They are relational. They are rooted in a shared belief that people deserve a second chance, and that recovery is possible.</p>
+    <div class="body-text" style="margin-bottom:32px">
+      <p style="font-size:14px; font-weight:400; line-height:1.9; color:#555; margin-bottom:14px">Behind every life restored, every family reunited, and every person who found their way back, there is a community. You are part of that community.</p>
+      <p style="font-size:14px; font-weight:400; line-height:1.9; color:#555; margin-bottom:0">The partnerships we have built together are not transactional. They are relational. They are rooted in a shared belief that people deserve a second chance, and that recovery is possible.</p>
     </div>
 
     <!-- PHOTO ROW 2 -->
-    <div class="photo-grid">
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-56.jpg" alt="Event Photo"/>
+    <div class="photo-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:32px">
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-56.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-78.jpg" alt="Event Photo"/>
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-78.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
-      <div class="photo-slot">
-        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-41.jpg" alt="Event Photo"/>
+      <div class="photo-slot" style="aspect-ratio:4/3; background:#e8f7f9; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/20260403_SanctuaryEvent-41.jpg" alt="Event Photo" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:5px" width="100%" height="100%">
       </div>
     </div>
 
-    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    <div class="divider" style="display:flex; align-items:center; gap:12px; margin-bottom:28px"><span style="flex:1; height:1px; background:#eee" height="1"></span><div class="dot" style="width:8px; height:8px; border-radius:50%; background:linear-gradient(135deg, #1aacba, #f07840); flex-shrink:0" width="8" height="8"></div><span style="flex:1; height:1px; background:#eee" height="1"></span></div>
 
     <!-- TAGLINE -->
-    <div class="tagline-strip">
-      <p>Stronger Businesses &nbsp;·&nbsp; Stronger Recovery &nbsp;·&nbsp; Stronger Community</p>
+    <div style="background:#fff8f5; border: 1px solid #fcdecb; border-radius: 6px; padding: 15px 20px; text-align: center; margin-bottom: 32px;">
+      <p style="font-family:'Montserrat',sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #f07840; margin: 0;">STRONGER BUSINESSES   ·   STRONGER RECOVERY   ·   STRONGER COMMUNITY</p>
     </div>
 
     <!-- CLOSING PARAGRAPH -->
-    <div class="body-text">
-      <p>What we have built together is bigger than any single event or milestone. It is a foundation. And it is our greatest hope that we continue to build on it together for decades to come. The people we serve deserve a community that does not waver, a network that shows up, and partners who believe as deeply as we do that generational change is possible. Every referral, every collaboration, every moment of shared mission moves us closer to a world where the cycle breaks and healing becomes a legacy passed down rather than a burden carried alone. That is the work. And we are honored to do it alongside you.</p>
+    <div class="body-text" style="margin-bottom:32px">
+      <p style="font-size:14px; font-weight:400; line-height:1.9; color:#555; margin-bottom:0">What we have built together is bigger than any single event or milestone. It is a foundation. And it is our greatest hope that we continue to build on it together for decades to come. The people we serve deserve a community that does not waver, a network that shows up, and partners who believe as deeply as we do that generational change is possible. Every referral, every collaboration, every moment of shared mission moves us closer to a world where the cycle breaks and healing becomes a legacy passed down rather than a burden carried alone. That is the work. And we are honored to do it alongside you.</p>
     </div>
 
     <!-- SIGNATURE -->
-    <div class="signature">
-      <div class="sign-off">With sincere gratitude,</div>
-      <div class="name">Joseph Landin</div>
-      <div class="title">CEO · Sanctuary Recovery Centers</div>
+    <div class="signature" style="margin-bottom:8px">
+      <div class="sign-off" style='font-family:"Playfair Display", serif; font-size:15px; font-style:italic; color:#aaa; margin-bottom:8px'>With sincere gratitude,</div>
+      <div class="name" style='font-family:"Playfair Display", serif; font-size:30px; font-weight:600; color:#1a1a1a; line-height:1.1; margin-bottom:6px'>Joseph Landin</div>
+      <div class="title" style="font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#1aacba">CEO · Sanctuary Recovery Centers</div>
     </div>
 
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <div style="background:#ffffff; padding: 32px 48px; text-align: center; border-top: 2px solid #f0f0f0;">
+    <div style="font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:#1a1a1a; margin-bottom:20px;">Joseph Landin — 20th Anniversary Message</div>
+    <div style="display:inline-block; padding: 5px; background: linear-gradient(135deg, #1aacba 0%, #3dbfcc 30%, #d4a843 65%, #f07840 100%); border-radius: 14px;">
+      <a href="https://youtu.be/aGqwhdMCEGo" target="_blank" style="display:block; text-decoration:none;">
+        <img src="https://irp.cdn-website.com/53a051d0/dms3rep/multi/Untitled+design-7.png" alt="Joseph Landin 20th Anniversary Message" style="width:340px; max-width:100%; border-radius:10px; display:block;">
+      </a>
+    </div>
   </div>
 
   <!-- COMMUNITY PARTNERS SECTION -->
   <div style="background:#f9f9f9; border-top: 2px solid #f0f0f0; padding: 28px 48px; text-align: center;">
     <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#1aacba; margin-bottom:14px;">Our Community Partners</div>
     <div style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:400; color:#555; line-height:2.4;">
-      Crossroads &nbsp;|&nbsp; Virtue Recovery Center &nbsp;|&nbsp; Mercy Care &nbsp;|&nbsp; New Freedom &nbsp;|&nbsp; Community Medical Services &nbsp;|&nbsp; Axiom Care &nbsp;|&nbsp; Behavioral Health Connections &nbsp;|&nbsp; Bumblebee &nbsp;|&nbsp; Staffzone &nbsp;|&nbsp; PAL &nbsp;|&nbsp; ProWest &nbsp;|&nbsp; NOAH &nbsp;|&nbsp; Kaizen Builders &nbsp;|&nbsp; VEN &nbsp;|&nbsp; Rancho Bella &nbsp;|&nbsp; Helping Hand Auto &nbsp;|&nbsp; Scottsdale Recovery Centers &nbsp;|&nbsp; SMC Recovery &nbsp;|&nbsp; Cholla Behavioral Health &nbsp;|&nbsp; Dominion Diagnostics &nbsp;|&nbsp; Barbell Saves &nbsp;|&nbsp; Germoth Electric &nbsp;|&nbsp; AHCCCS &nbsp;|&nbsp; Taco Cinco &nbsp;|&nbsp; Martin Auto Museum &nbsp;|&nbsp; Intensive Treatment Services &nbsp;|&nbsp; Pristine Motors &nbsp;|&nbsp; Rock View Recovery
+      Crossroads  |  Virtue Recovery Center  |  Mercy Care  |  New Freedom  |  Community Medical Services  |  Axiom Care  |  Behavioral Health Connections  |  Bumblebee  |  Staffzone  |  PAL  |  ProWest  |  NOAH  |  Kaizen Builders  |  VEN  |  Rancho Bella  |  Helping Hand Auto  |  Scottsdale Recovery Centers  |  SMC Recovery  |  Cholla Behavioral Health  |  Dominion Diagnostics  |  Barbell Saves  |  Germoth Electric  |  AHCCCS  |  Taco Cinco  |  Martin Auto Museum  |  Intensive Treatment Services  |  Pristine Motors  |  Rock View Recovery
     </div>
   </div>
-  <div class="footer">
-    <div class="footer-inner">
-      <img class="f-logo-img" src="https://lirp.cdn-website.com/53a051d0/dms3rep/multi/opt/logo-sq-1920w.webp" alt="Sanctuary Recovery Centers"/>
-      <div class="f-right">
-        <div class="f-tag">True Healing &amp; Continued Care&#8482;</div>
-        <div class="f-divider"></div>
-        <div class="f-addr">11645 N Cave Creek Rd &nbsp;|&nbsp; Phoenix, AZ 85020</div>
+  <div class="footer" style="background:#2a2828; padding:28px 32px">
+    <div class="footer-inner" style="display:flex; align-items:center; justify-content:space-between; gap:20px">
+      <img class="f-logo-img" src="https://lirp.cdn-website.com/53a051d0/dms3rep/multi/opt/logo-sq-1920w.webp" alt="Sanctuary Recovery Centers" style="width:90px; height:auto; display:block; flex-shrink:0" width="90" height="auto">
+      <div class="f-right" style="text-align:right" align="right">
+        <div class="f-tag" style="font-size:9px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:rgba(255, 255, 255, 0.75); margin-bottom:6px">True Healing &amp; Continued Care™</div>
+        <div class="f-divider" style="width:40px; height:2px; background:linear-gradient(to left, #1aacba, #f07840); margin:8px 0 8px auto; border-radius:2px" width="40" height="2"></div>
+        <div class="f-addr" style="font-size:9px; color:rgba(255, 255, 255, 0.4); letter-spacing:0.5px">11645 N Cave Creek Rd  |  Phoenix, AZ 85020</div>
       </div>
     </div>
   </div>
